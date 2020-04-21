@@ -73,21 +73,27 @@ scrManager:
         self.source = 'Go Button Down.png'
     on_release:
         self.source = 'Go Button Normal.png'
-        root.verify_credentials()
+        #root.verify_credentials()
+    size_hint: 0.25,0.25
+    pos_hint: {"x": 0.39, "top": 0.29}
 <GoButton2@ButtonBehavior+Image>
     source: 'Go Button Normal.png'
     on_press:
         self.source = 'Go Button Down.png'
     on_release:
         self.source = 'Go Button Normal.png'
-        root.verify_credentials()
+        #root.verify_credentials()
+    size_hint: 0.25,0.25
+    pos_hint: {"x": 0.39, "top": 0.29}
 <GoButton3@ButtonBehavior+Image>
     source: 'Go Button Normal.png'
     on_press:
         self.source = 'Go Button Down.png'
     on_release:
         self.source = 'Go Button Normal.png'
-        root.verify_credentials()
+        #root.verify_credentials()
+    size_hint: 0.25,0.25
+    pos_hint: {"x": 0.39, "top": 0.29}
 
 <HomeButton@ButtonBehavior+Image>
     source: 'Home Button Normal.png'
@@ -292,7 +298,7 @@ scrManager:
             on_release:
                 self.source = "Student Button Normal.png"
                 root.manager.transition = FadeTransition()
-                app.root.current = "homeWin"
+                app.root.current = "userpassWin"
 
         RegisterButton:
 
@@ -819,8 +825,8 @@ scrManager:
             id: passw
             password: True # hide password
         GoButton1:
-            #on_release:
-                #root.verify_credentials()
+            on_release:
+                root.loginn()
                 #login.text = ""
                 #passw.text = ""
 
